@@ -1,0 +1,17 @@
+***************
+*** 214,220 ****
+  			 source.Reply(_("No matching entries on %s %s list."), ci->name.c_str(), source.command.c_str());
+  		else
+  		{
+- 			Log(override ? LOG_OVERRIDE : LOG_COMMAND, source.u, c, ci) << "deleted access of users " << Nicks;
+  
+  			if (Deleted == 1)
+  				source.Reply(_("Deleted one entry from %s %s list."), ci->name.c_str(), source.command.c_str());
+--- 214,220 ----
+  			 source.Reply(_("No matching entries on %s %s list."), ci->name.c_str(), source.command.c_str());
+  		else
+  		{
++ 			Log(override ? LOG_OVERRIDE : LOG_COMMAND, source.u, c, ci) << "to delete " << Nicks;
+  
+  			if (Deleted == 1)
+  				source.Reply(_("Deleted one entry from %s %s list."), ci->name.c_str(), source.command.c_str());
